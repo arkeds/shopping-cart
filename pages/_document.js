@@ -8,14 +8,14 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html lang='en'>
         <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1"  />
-            <link rel="icon" href="/favicon.ico" />
-            <title>Shopping Cart</title>
-            <Head />
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <link rel='icon' href='/favicon.ico' />
+          <title>Shopping Cart</title>
+          <Head />
         </head>
-        <body className="bg-gray-100">
+        <body className='bg-gray-100'>
           <Main />
           <NextScript />
         </body>
