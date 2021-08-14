@@ -2,6 +2,6 @@
 
 This is a simple shopping cart prototype made with Next.js and Tawilwind CSS.
 
-This is made to test features of nextjs
+This is made to showcase skills in NextJs
 
 Arvin Kenn L. delos Santos
