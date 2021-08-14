@@ -14,3 +14,9 @@ export const fakeProducts = (total) => {
   }
   return products
 }
+
+export const cartTotal = (cartItems) => {
+  return cartItems.reduce((acc, item) => {
+    return (acc += parseInt(item.qty))
+  }, 0)
+}
