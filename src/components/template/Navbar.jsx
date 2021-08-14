@@ -1,3 +1,4 @@
+import Link from 'next/link'
 const Navbar = () => {
   return (
     <nav className='bg-gray-800'>
@@ -55,13 +56,22 @@ const Navbar = () => {
             </div>
             <div className='hidden sm:block sm:ml-6'>
               <div className='flex space-x-4'>
-                <a
-                  href='#'
-                  className='bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'
-                  aria-current='page'
-                >
-                  Home
-                </a>
+                <Link href='/store'>
+                  <a
+                    className='bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'
+                    aria-current='page'
+                  >
+                    Store
+                  </a>
+                </Link>
+                <Link href='/products/create'>
+                  <a
+                    className='bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'
+                    aria-current='page'
+                  >
+                    Add Product
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -76,4 +86,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar;
+export default Navbar
