@@ -5,12 +5,8 @@ import { cartTotal } from '@helpers/products'
 
 const Navbar = () => {
   const { state: cartState } = React.useContext(CartContext)
-  const [totalProducts, setTotalProducts] = React.useState(0)
 
-  React.useEffect(() => {
-    const total = cartTotal(Object.values(cartState.items))
-    setTotalProducts(total)
-  }, [])
+  const totalProducts = cartTotal(Object.values(cartState.items))
 
   return (
     <nav className='bg-gray-800 fixed w-full top-0'>
