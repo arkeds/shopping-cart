@@ -5,8 +5,12 @@ import { cartTotal } from '@helpers/products'
 
 const Navbar = () => {
   const { state: cartState } = React.useContext(CartContext)
+  const [totalProducts, setTotalProducts] = React.useState(0)
 
-  const totalProducts = cartTotal(Object.values(cartState.items))
+  React.useEffect(() => {
+    const total = cartTotal(Object.values(cartState.items))
+    setTotalProducts(total)
+  }, [])
 
   return (
     <nav className='bg-gray-800 fixed w-full top-0'>
@@ -33,13 +37,17 @@ const Navbar = () => {
             </Link>
           </div>
           <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
-            <div className='flex-shrink-0 flex items-center'>
-              <h3 className='block lg:hidden text-white h-8 w-auto'>
-                SHOPPING CART
-              </h3>
-              <h3 className='hidden lg:block text-white h-8 w-auto'>
-                SHOPPING CART
-              </h3>
+            <div className='flex-shrink-0 flex items-center mt-3'>
+              <Link href='/'>
+                <a className='block lg:hidden text-white h-8 w-auto'>
+                  SHOPPING CART
+                </a>
+              </Link>
+              <Link href='/'>
+                <a className='hidden lg:block text-white h-8 w-auto'>
+                  SHOPPING CART
+                </a>
+              </Link>
             </div>
             <div className='hidden sm:block sm:ml-6'>
               <div className='flex space-x-4'>
