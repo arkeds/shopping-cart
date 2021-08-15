@@ -26,6 +26,19 @@ const cartReducer = (state, action) => {
         },
       }
     }
+    case 'DECREMENT_ITEM_QTY': {
+      const itemQty = parseInt(state.items[action.payload].qty) - 1
+      return {
+        ...state,
+        items: {
+          ...state.items,
+          [action.payload]: {
+            ...state.items[action.payload],
+            qty: itemQty,
+          },
+        },
+      }
+    }
     default:
       return state
   }

@@ -34,7 +34,7 @@ const ProductTile = ({
             className={`rounded  text-white px-4 py-2 ${
               disabled
                 ? 'bg-green-500 hover:bg-green-700'
-                : 'bg-blue-500 hover:bg-blue-700'
+                : 'bg-gray-800 hover:bg-gray-800'
             }`}
             disabled={disabled}
             onClick={() => onClickAddToCart(productId)}
