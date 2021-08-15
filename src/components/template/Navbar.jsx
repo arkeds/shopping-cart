@@ -17,14 +17,14 @@ const Navbar = () => {
               <a className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
-                  class='h-6 w-6'
+                  className='h-6 w-6'
                   fill='none'
                   viewBox='0 0 24 24'
                   stroke='currentColor'
                 >
                   <path
-                    strokeLineCap='round'
-                    strokeLineJoin='round'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
                     strokeWidth='2'
                     d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
                   />
@@ -54,13 +54,17 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className='flex justify-between inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
+          <div className='justify-between inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
             <Link href='/cart'>
-              <a className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
+              <a
+                role='button'
+                className='flex relative items-center justify-center px-4 py-2 pr-5 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'
+              >
                 <i className='fas fa-shopping-cart fa-lg'></i>
-                <span className='abosolute px-2 py-1 mr-2 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full'>
+
+                <label className='absolute -right-1 -top-1  bg-red-600 px-2 rounded-full text-white font-mono leading-5 text-center text-sm'>
                   {totalProducts}
-                </span>
+                </label>
               </a>
             </Link>
           </div>

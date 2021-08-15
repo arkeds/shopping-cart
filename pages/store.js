@@ -18,7 +18,7 @@ const store = () => {
     if (!productInCart) {
       const productDetails = products.find((item) => item.id === itemId)
       const payload = {
-        price: productDetails.price,
+        ...productDetails,
         qty: 1,
       }
       cartDispatch({
