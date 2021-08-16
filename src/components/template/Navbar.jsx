@@ -66,9 +66,11 @@ const Navbar = () => {
               >
                 <i className='fas fa-shopping-cart fa-lg'></i>
 
-                <label className='absolute -right-1 -top-1  bg-red-600 px-2 rounded-full text-white font-mono leading-5 text-center text-sm'>
-                  {totalProducts}
-                </label>
+                {!!totalProducts && (
+                  <label className='absolute -right-1 -top-1  bg-red-600 px-2 rounded-full text-white font-mono leading-5 text-center text-sm'>
+                    {totalProducts}
+                  </label>
+                )}
               </a>
             </Link>
           </div>
