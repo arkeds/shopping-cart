@@ -7,4 +7,4 @@ This is made to showcase skills in NextJs
 To start run in terminal
 yarn dev
 
-Arvin Kenn L. delos Santos - arke
+Arvin Kenn L. delos Santos
